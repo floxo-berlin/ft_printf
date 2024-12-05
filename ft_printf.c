@@ -1,48 +1,26 @@
 #include "ft_printf.h"
 
-static int print_format(const char format, va_list args)
+int print_format(const char format, va_list args)
 {
     int count = 0;
 
     if (format == 'c')
-    {
-        char c = (char)va_arg(args, int);
-        count += ft_print_char(c);
-    }
+        count = ft_print_char(va_arg(args, int));
     else if (format == 's')
-    {
-        char *str = va_arg(args, char *);
-        count += ft_print_str(str);
-    }
+        count = ft_print_str(va_arg(args, char *));
     else if (format == 'p')
-    {
-        void *ptr = va_arg(args, void *);
-        count += ft_print_ptr(ptr);
-    }
+        count = ft_print_ptr(va_arg(args, void *));
     else if (format == 'd' || format == 'i')
-    {
-        int num = va_arg(args, int);
-        count += ft_print_nbr(num);
-    }
+        count = ft_print_nbr(va_arg(args, int));
     else if (format == 'u')
-    {
-        unsigned int num = va_arg(args, unsigned int);
-        count += ft_print_unsigned(num);
-    }
+        count = ft_print_unsigned(va_arg(args, unsigned int));
     else if (format == 'x')
-    {
-        unsigned int num = va_arg(args, unsigned int);
-        count += ft_print_hexa(num, 0);
-    }
+        count = ft_print_hexa(va_arg(args, unsigned int), 0);
     else if (format == 'X')
-    {
-        unsigned int num = va_arg(args, unsigned int);
-        count += ft_print_hexa(num, 1);
-    }
+        count = ft_print_hexa(va_arg(args, unsigned int), 1);
     else if (format == '%')
-    {
-        count += ft_print_char('%');
-    }
+        count = ft_print_char('%');
+
     return count;
 }
 

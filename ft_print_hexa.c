@@ -14,7 +14,12 @@
 
 int ft_print_hexa(unsigned int n, int uppercase)
 {
-    char *hex = uppercase ? "0123456789ABCDEF" : "0123456789abcdef";
+    char *hex;
+    if (uppercase)
+        hex = "0123456789ABCDEF";
+    else
+        hex = "0123456789abcdef";
+
     int count = 0;
 
     if (n >= 16)
