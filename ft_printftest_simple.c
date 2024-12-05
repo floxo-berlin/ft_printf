@@ -32,7 +32,7 @@ int	main(void)
 	u = 4294967254U;
 	x = 255;
 	X = 255;
-	// Print variable initialization
+
 	printf("Variables Initialization:\n");
 	printf("char c = 'A';\n");
 	printf("char *str = \"Hello, World!\";\n");
@@ -42,6 +42,7 @@ int	main(void)
 	printf("unsigned int u = 4294967254U;\n");
 	printf("unsigned int x = 255;\n");
 	printf("unsigned int X = 255;\n\n");
+
 	// Test %c
 	printf("******************\n");
 	printf("Testing %%c:\n");
@@ -50,6 +51,7 @@ int	main(void)
 	printf("ft_printf(\"%%c\", c)\n");
 	ft_printf("My ft_printf(\"%%c\", c): %c\n\n", c);
 	printf("\n\n");
+
 	// Test %s
 	printf("******************\n");
 	printf("Testing %%s:\n");
@@ -58,6 +60,7 @@ int	main(void)
 	printf("ft_printf(\"%%s\", str)\n");
 	ft_printf("My ft_printf(\"%%s\", str): %s\n\n", str);
 	printf("\n\n");
+
 	// Test %p
 	printf("******************\n");
 	printf("Testing %%p:\n");
@@ -66,6 +69,7 @@ int	main(void)
 	printf("ft_printf(\"%%p\", ptr)\n");
 	ft_printf("My ft_printf(\"%%p\", ptr): %p\n\n", ptr);
 	printf("\n\n");
+
 	// Test %d
 	printf("******************\n");
 	printf("Testing %%d:\n");
@@ -74,6 +78,7 @@ int	main(void)
 	printf("ft_printf(\"%%d\", d)\n");
 	ft_printf("My ft_printf(\"%%d\", d): %d\n\n", d);
 	printf("\n\n");
+
 	// Test %i
 	printf("******************\n");
 	printf("Testing %%i:\n");
@@ -82,6 +87,7 @@ int	main(void)
 	printf("ft_printf(\"%%i\", i)\n");
 	ft_printf("My ft_printf(\"%%i\", i): %i\n\n", i);
 	printf("\n\n");
+
 	// Test %u
 	printf("******************\n");
 	printf("Testing %%u:\n");
@@ -90,6 +96,7 @@ int	main(void)
 	printf("ft_printf(\"%%u\", u)\n");
 	ft_printf("My ft_printf(\"%%u\", u): %u\n\n", u);
 	printf("\n\n");
+
 	// Test %x
 	printf("******************\n");
 	printf("Testing %%x:\n");
@@ -98,6 +105,7 @@ int	main(void)
 	printf("ft_printf(\"%%x\", x)\n");
 	ft_printf("My ft_printf(\"%%x\", x): %x\n\n", x);
 	printf("\n\n");
+
 	// Test %X
 	printf("******************\n");
 	printf("Testing %%X:\n");
@@ -106,6 +114,7 @@ int	main(void)
 	printf("ft_printf(\"%%X\", X)\n");
 	ft_printf("My ft_printf(\"%%X\", X): %X\n\n", X);
 	printf("\n\n");
+
 	// Test %%
 	printf("******************\n");
 	printf("Testing %%%%:\n");
