@@ -2,13 +2,24 @@
 
 void ft_print_ptr(void *ptr)
 {
-    uintptr_t addr;
+    uintptr_t addr = (uintptr_t)ptr;
     char *hex = "0123456789abcdef";
 
-    addr = (uintptr_t)ptr;
     write(1, "0x", 2);
-    for (int i = (sizeof(uintptr_t) * 2) - 1; i >= 0; i--)
+    if (addr == 0)
     {
-        write(1, &hex[(addr >> (i * 4)) & 0xf], 1);
+        write(1, "0", 1);
+    }
+    else
+    {
+        char buffer[16];
+        int i = 15;
+        while (addr)
+        {
+            buffer[i--] = hex[addr % 16];
+            addr /= 16;
+        }
+        while (++i < 16)
+            write(1, &buffer[i], 1);
     }
 }

@@ -3,21 +3,44 @@
 static void print_format(const char format, va_list args)
 {
     if (format == 'c')
-        ft_print_char(va_arg(args, int));
+    {
+        char c = (char)va_arg(args, int);
+        ft_print_char(c);
+    }
     else if (format == 's')
-        ft_print_str(va_arg(args, char *));
+    {
+        char *str = va_arg(args, char *);
+        ft_print_str(str);
+    }
     else if (format == 'p')
-        ft_print_ptr(va_arg(args, void *));
+    {
+        void *ptr = va_arg(args, void *);
+        ft_print_ptr(ptr);
+    }
     else if (format == 'd' || format == 'i')
-        ft_print_nbr(va_arg(args, int));
+    {
+        int num = va_arg(args, int);
+        ft_print_nbr(num);
+    }
     else if (format == 'u')
-        ft_print_unsigned(va_arg(args, unsigned int));
+    {
+        unsigned int num = va_arg(args, unsigned int);
+        ft_print_unsigned(num);
+    }
     else if (format == 'x')
-        ft_print_hexa(va_arg(args, unsigned int), 0);
+    {
+        unsigned int num = va_arg(args, unsigned int);
+        ft_print_hexa(num, 0);
+    }
     else if (format == 'X')
-        ft_print_hexa(va_arg(args, unsigned int), 1);
+    {
+        unsigned int num = va_arg(args, unsigned int);
+        ft_print_hexa(num, 1);
+    }
     else if (format == '%')
+    {
         ft_print_char('%');
+    }
 }
 
 int ft_printf(const char *format, ...)
@@ -34,7 +57,9 @@ int ft_printf(const char *format, ...)
             print_format(format[i], args);
         }
         else
+        {
             ft_print_char(format[i]);
+        }
         i++;
     }
     va_end(args);
