@@ -32,10 +32,13 @@ fclean: clean
 
 re: fclean all
 
-test: $(LIBFT) $(NAME) printf_test.o
-	$(CC) $(CFLAGS) $(OBJS) printf_test.o -L. -lftprintf -L$(LIBFT_PATH) -lft -o testprintf
+simple_test: $(LIBFT) $(NAME) ft_printftest_simple.o
+	$(CC) $(CFLAGS) $(OBJS) ft_printftest_simple.o -L. -lftprintf -L$(LIBFT_PATH) -lft -o simple_test
 
-printf_test.o: printf_test.c
-	$(CC) $(CFLAGS) -c printf_test.c -o printf_test.o
+ft_printftest_simple.o: ft_printftest_simple.c
+	$(CC) $(CFLAGS) -c ft_printftest_simple.c -o ft_printftest_simple.o
+
+tclean:
+	$(RM) ft_printftest_simple.o simple_test
 
 .PHONY: all clean fclean re test
