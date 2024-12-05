@@ -27,81 +27,81 @@ int main(void)
     printf("******************\n");
     printf("Testing %%c:\n");
     printf("printf(\"%%c\", c)\n");
-    printf("Original printf(): %c\n\n", c);
+    printf("Original printf(\"%%c\", c): %c\n", c);
     printf("ft_printf(\"%%c\", c)\n");
-    ft_printf("My ft_printf(): %c\n\n", c);
+    ft_printf("My ft_printf(\"%%c\", c): %c\n\n", c);
     printf("\n\n");
 
     // Test %s
     printf("******************\n");
     printf("Testing %%s:\n");
     printf("printf(\"%%s\", str)\n");
-    printf("Original printf(): %s\n\n", str);
+    printf("Original printf(\"%%s\", str): %s\n", str);
     printf("ft_printf(\"%%s\", str)\n");
-    ft_printf("My ft_printf(): %s\n\n", str);
+    ft_printf("My ft_printf(\"%%s\", str): %s\n\n", str);
     printf("\n\n");
 
     // Test %p
     printf("******************\n");
     printf("Testing %%p:\n");
     printf("printf(\"%%p\", ptr)\n");
-    printf("Original printf(): %p\n\n", ptr);
+    printf("Original printf(\"%%p\", ptr): %p\n", ptr);
     printf("ft_printf(\"%%p\", ptr)\n");
-    ft_printf("My ft_printf(): %p\n\n", ptr);
+    ft_printf("My ft_printf(\"%%p\", ptr): %p\n\n", ptr);
     printf("\n\n");
 
     // Test %d
     printf("******************\n");
     printf("Testing %%d:\n");
     printf("printf(\"%%d\", d)\n");
-    printf("Original printf(): %d\n\n", d);
+    printf("Original printf(\"%%d\", d): %d\n", d);
     printf("ft_printf(\"%%d\", d)\n");
-    ft_printf("My ft_printf(): %d\n\n", d);
+    ft_printf("My ft_printf(\"%%d\", d): %d\n\n", d);
     printf("\n\n");
 
     // Test %i
     printf("******************\n");
     printf("Testing %%i:\n");
     printf("printf(\"%%i\", i)\n");
-    printf("Original printf(): %i\n\n", i);
+    printf("Original printf(\"%%i\", i): %i\n", i);
     printf("ft_printf(\"%%i\", i)\n");
-    ft_printf("My ft_printf(): %i\n\n", i);
+    ft_printf("My ft_printf(\"%%i\", i): %i\n\n", i);
     printf("\n\n");
 
     // Test %u
     printf("******************\n");
     printf("Testing %%u:\n");
     printf("printf(\"%%u\", u)\n");
-    printf("Original printf(): %u\n\n", u);
+    printf("Original printf(\"%%u\", u): %u\n", u);
     printf("ft_printf(\"%%u\", u)\n");
-    ft_printf("My ft_printf(): %u\n\n", u);
+    ft_printf("My ft_printf(\"%%u\", u): %u\n\n", u);
     printf("\n\n");
 
     // Test %x
     printf("******************\n");
     printf("Testing %%x:\n");
     printf("printf(\"%%x\", x)\n");
-    printf("Original printf(): %x\n\n", x);
+    printf("Original printf(\"%%x\", x): %x\n", x);
     printf("ft_printf(\"%%x\", x)\n");
-    ft_printf("My ft_printf(): %x\n\n", x);
+    ft_printf("My ft_printf(\"%%x\", x): %x\n\n", x);
     printf("\n\n");
 
     // Test %X
     printf("******************\n");
     printf("Testing %%X:\n");
     printf("printf(\"%%X\", X)\n");
-    printf("Original printf(): %X\n\n", X);
+    printf("Original printf(\"%%X\", X): %X\n", X);
     printf("ft_printf(\"%%X\", X)\n");
-    ft_printf("My ft_printf(): %X\n\n", X);
+    ft_printf("My ft_printf(\"%%X\", X): %X\n\n", X);
     printf("\n\n");
 
     // Test %%
     printf("******************\n");
     printf("Testing %%%%:\n");
     printf("printf(\"%%%%\")\n");
-    printf("Original printf(): %%\n\n");
+    printf("Original printf(\"%%%%\"): %%\n");
     printf("ft_printf(\"%%%%\")\n");
-    ft_printf("My ft_printf(): %%\n\n");
+    ft_printf("My ft_printf(\"%%%%\"): %%\n\n");
     printf("\n\n");
 
     return 0;

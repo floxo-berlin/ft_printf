@@ -12,12 +12,13 @@
 
 #include "ft_printf.h"
 
-void ft_print_hexa(unsigned int n, int uppercase)
+int ft_print_hexa(unsigned int n, int uppercase)
 {
-    char *hex;
+    char *hex = uppercase ? "0123456789ABCDEF" : "0123456789abcdef";
+    int count = 0;
 
-    hex = uppercase ? "0123456789ABCDEF" : "0123456789abcdef";
     if (n >= 16)
-        ft_print_hexa(n / 16, uppercase);
+        count += ft_print_hexa(n / 16, uppercase);
     ft_print_char(hex[n % 16]);
+    return count + 1;
 }
