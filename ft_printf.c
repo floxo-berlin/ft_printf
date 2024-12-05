@@ -64,7 +64,7 @@ int	ft_parse_flags(const char *str, int i, va_list_args, t_flags *flags)
 	return (i);
 }
 
-int	defined(__linux__) || defined(__gnu_linux__)
+#if	defined(__linux__) || defined(__gnu_linux__)
 
 int	ft_parse(char *str, va_list args)
 {
@@ -93,6 +93,35 @@ int	ft_parse(char *str, va_list args)
 	}
 	return (count);
 }
+
+#else
+
+int	ft_parse(char *str, va_list args)
+{
+	int			i;
+	int			count;
+	t_flags	flags;
+
+	i = -1;
+	count = 0;
+	while (str[++i])
+	{
+		flags = ft_flags_init();
+		if (str[i] == '%' && str[i + 1] != '\0')
+		{
+			i = ft_parse_flags(str, i, args, &flags);
+			if (str[i] != '\0' && flags.spec > 0 && ft_istype(str[i]))
+					count += ft_print_arg(str[i], args, flags);
+			else if (str[i] != '\0')
+					count += ft_print_char(str[i], flags);
+		}
+		else
+				count += ft_print_c(str[i]);
+	}
+	return (count);
+}
+
+#endif
 
 int	ft_printf(const char *format, ...)
 {
